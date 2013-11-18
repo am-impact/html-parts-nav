@@ -10,6 +10,13 @@
             <li><a href="contact.html" title="Contact">Contact</a></li>
         </ul>
     </nav>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+        head.js(
+            { nav: 'scripts/yeah.nav.js' }
+        );
+    </script>
  *
  */
 .page-header nav {
