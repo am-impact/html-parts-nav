@@ -1,9 +1,9 @@
 html-parts-nav
 ==============
 
-Uitbreiding op [html startup](https://github.com/nweevers/html_startup_inuit)
+Uitbreiding op [html startup](https://github.com/am-impact/html_startup_inuit)
 
 Bestanden
 ---------
- * content/sass/ui/components/_nav.scss
- * scripts/yeah.nav.js
+ * content/sass/components/_nav.scss
+ * scripts/fw.nav.js

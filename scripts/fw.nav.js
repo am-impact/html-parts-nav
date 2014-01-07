@@ -1,6 +1,6 @@
-var Yeah = Yeah || {};
+var FW = FW || {};
 
-Yeah.nav = {
+FW.nav = {
     delay		: 600,
     timer		: null,
     menuitem	: null,
@@ -10,17 +10,17 @@ Yeah.nav = {
      * @param	string	selector
      */
     apply: function( selector ) {
-        $(selector).hover(Yeah.nav.open, Yeah.nav.setTimer);
-        $(document).click(Yeah.nav.close);
+        $(selector).hover(FW.nav.open, FW.nav.setTimer);
+        $(document).click(FW.nav.close);
     },
 
     /**
      * cancelTimer
      */
     cancelTimer: function() {
-        if(Yeah.nav.timer)	{
-            clearTimeout(Yeah.nav.timer);
-            Yeah.nav.timer = null;
+        if(FW.nav.timer)	{
+            clearTimeout(FW.nav.timer);
+            FW.nav.timer = null;
         }
     },
 
@@ -28,7 +28,7 @@ Yeah.nav = {
      * setTimer
      */
     setTimer: function() {
-        Yeah.nav.timer = window.setTimeout(Yeah.nav.close, Yeah.nav.delay);
+        FW.nav.timer = window.setTimeout(FW.nav.close, FW.nav.delay);
     },
 
     /**
@@ -36,11 +36,11 @@ Yeah.nav = {
      * @param	string	current_menu_id
      */
     close: function( current_menu_id ) {
-        if(Yeah.nav.menuitem)	{
-            if(Yeah.nav.menuitem.data("menuID") != current_menu_id)
+        if(FW.nav.menuitem)	{
+            if(FW.nav.menuitem.data("menuID") != current_menu_id)
             {
-                $(Yeah.nav.menuitem).removeClass("hover");
-                $(Yeah.nav.menuitem).find('> .subnav').attr('style', function(i, style)
+                $(FW.nav.menuitem).removeClass("hover");
+                $(FW.nav.menuitem).find('> .subnav').attr('style', function(i, style)
                 {
                     if(style) {
                         return style.replace(/left[^;]+;?/g, '');
@@ -63,11 +63,11 @@ Yeah.nav = {
             current_menu.data("menuID", (Math.random() +''+ Math.random()).replace(/\./g,""))
         }
 
-        Yeah.nav.cancelTimer();
-        Yeah.nav.close( current_menu.data("menuID") );
-        Yeah.nav.menuitem = current_menu;
+        FW.nav.cancelTimer();
+        FW.nav.close( current_menu.data("menuID") );
+        FW.nav.menuitem = current_menu;
     }
 };
 
 // Submenu
-Yeah.nav.apply(".mainnav > li");
+FW.nav.apply(".mainnav > li");
