@@ -68,6 +68,3 @@ FW.nav = {
         FW.nav.menuitem = current_menu;
     }
 };
-
-// Submenu
-FW.nav.apply(".mainnav > li");

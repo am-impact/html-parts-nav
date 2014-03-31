@@ -1,57 +1,41 @@
-/*------------------------------------*\
-    NAV
-\*------------------------------------*/
-/**
- * Navigatie in header
- *
-    <nav>
-        <ul class="mainnav">
-            <li class="active parent-active"><a href="index.html" title="Home">Home</a></li>
-            <li><a href="contact.html" title="Contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script>
-        head.js(
-            { nav: 'scripts/fw.nav.js' }
-        );
-    </script>
- *
- */
-.page-header nav {
-    @include inline(middle);
-}
-
+//
+// Nav element
+//
 .mainnav {
-    > li {
-        position: relative;
 
-        &:hover,
-        &.hover {
+    //
+    // Bovenste laag navigatie
+    //
+    &__level0 {
+        > li {
+            position: relative;
+
+            &:hover,
+            &.hover {
+                > a {
+
+                }
+            }
+
             > a {
-
+                text-decoration: none;
             }
         }
 
-        > a {
-            text-decoration: none;
+        > li
+
+        // parent active wordt gebruikt als een submenu actief is
+        > .active > a,
+        .parent-active > a {
+
         }
     }
 
-    > li
 
-    // parent active wordt gebruikt als een submenu actief is
-    > .active > a,
-    .parent-active > a {
-
+    //
+    // Sub navigatie laag 1
+    //
+    &__level1 {
+        position: absolute;
     }
-}
-
-
-//
-// Sub navigation
-//
-.mainnav--level1 {
-    position: absolute;
 }
