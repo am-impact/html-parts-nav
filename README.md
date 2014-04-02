@@ -11,7 +11,7 @@ Uitbreiding op [html startup](https://github.com/am-impact/html-startup)
 ### Html
  	<nav class="mainnav">
         <ul class="mainnav__level0">
-            <li class="active parent-active"><a href="index.html" title="Home">Home</a></li>
+            <li class="active"><a href="index.html" title="Home">Home</a></li>
             <li><a href="contact.html" title="Contact">Contact</a></li>
         </ul>
     </nav>

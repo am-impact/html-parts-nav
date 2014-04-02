@@ -24,9 +24,8 @@
 
         > li
 
-        // parent active wordt gebruikt als een submenu actief is
-        > .active > a,
-        .parent-active > a {
+        // Actief
+        > .active > a {
 
         }
     }
