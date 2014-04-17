@@ -40,12 +40,6 @@ FW.nav = {
             if(FW.nav.menuitem.data("menuID") != current_menu_id)
             {
                 $(FW.nav.menuitem).removeClass("hover");
-                $(FW.nav.menuitem).find('> .subnav').attr('style', function(i, style)
-                {
-                    if(style) {
-                        return style.replace(/left[^;]+;?/g, '');
-                    }
-                });
             }
         }
     },
