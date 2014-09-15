@@ -9,7 +9,7 @@ Uitbreiding op [html startup](https://github.com/am-impact/html-startup)
 ## Voorbeelden
 
 ### Html
- 	<nav class="mainnav">
+    <nav class="mainnav">
         <ul class="mainnav__level0">
             <li class="active"><a href="index.html" title="Home">Home</a></li>
             <li><a href="contact.html" title="Contact">Contact</a></li>
@@ -24,7 +24,7 @@ Uitbreiding op [html startup](https://github.com/am-impact/html-startup)
 
 ### Scss
 ###### _settings.scss
-	// niks
+    // niks
 
 ### Javascript
 ###### Subnav vertraging
