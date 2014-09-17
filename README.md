@@ -3,8 +3,8 @@
 Uitbreiding op [html startup](https://github.com/am-impact/html-startup)
 
 ## Bestanden
- * content/sass/components/_nav.scss
- * scripts/fw.form.js
+ * resources/sass/components/_nav.scss
+ * resources/scripts/fw.form.js
 
 ## Voorbeelden
 
