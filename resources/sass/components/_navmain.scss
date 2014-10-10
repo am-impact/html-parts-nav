@@ -1,12 +1,8 @@
-//
-// Nav element
-//
-.mainnav {
-
+.navmain {
     //
     // Bovenste laag navigatie
     //
-    &__level0 {
+    .level0 {
         > li {
             position: relative;
 
@@ -32,7 +28,7 @@
     //
     // Sub navigatie laag 1
     //
-    &__level1 {
+    .level1 {
         position: absolute;
     }
 }
