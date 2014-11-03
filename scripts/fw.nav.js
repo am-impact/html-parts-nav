@@ -50,16 +50,18 @@ FW.nav = {
     open: function() {
         current_menu = $(this);
 
-        current_menu.addClass("hover");
+        if( current_menu.find('ul').length > 0 ) {
+            current_menu.addClass("hover");
 
-        // uniek menu id per submenu, dit om bij het sluiten te checken of niet de actieve wordt gesloten
-        if(!current_menu.data("menuID"))    {
-            current_menu.data("menuID", (Math.random() +''+ Math.random()).replace(/\./g,""))
+            // uniek menu id per submenu, dit om bij het sluiten te checken of niet de actieve wordt gesloten
+            if(!current_menu.data("menuID"))    {
+                current_menu.data("menuID", (Math.random() +''+ Math.random()).replace(/\./g,""))
+            }
+
+            FW.nav.cancelTimer();
+            FW.nav.close( current_menu.data("menuID") );
+            FW.nav.menuitem = current_menu;
         }
-
-        FW.nav.cancelTimer();
-        FW.nav.close( current_menu.data("menuID") );
-        FW.nav.menuitem = current_menu;
     }
 };
 
