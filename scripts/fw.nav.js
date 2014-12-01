@@ -37,8 +37,7 @@ FW.nav = {
      */
     close: function( current_menu_id ) {
         if(FW.nav.menuitem) {
-            if(FW.nav.menuitem.data("menuID") != current_menu_id)
-            {
+            if(FW.nav.menuitem.data("menuID") != current_menu_id) {
                 $(FW.nav.menuitem).removeClass("hover");
             }
         }
@@ -55,8 +54,8 @@ FW.nav = {
         }
 
         // uniek menu id per submenu, dit om bij het sluiten te checken of niet de actieve wordt gesloten
-        if(!current_menu.data("menuID"))    {
-            current_menu.data("menuID", (Math.random() +''+ Math.random()).replace(/\./g,""))
+        if(!current_menu.data("menuID")) {
+            current_menu.data("menuID", (Math.random() +''+ Math.random()).replace(/\./g,""));
         }
 
         FW.nav.cancelTimer();
